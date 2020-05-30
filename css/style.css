@@ -1,4 +1,15 @@
 
+/* Header */
+@media (min-width: 992px) {
+  #headerbackground{
+    background-image: url("../images/mathbackground.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: auto;
+  }
+}
+
+
 /* Navbar */
 .navbar {
     background-color: #555555 !important;
@@ -8,6 +19,7 @@
 #firstlist {
    counter-reset: paper;
 }
+
 .paper-list tr td:first-child{
    width: 30px;
 }
@@ -16,11 +28,12 @@
    list-style-type:none;
    counter-increment: paper;
    vertical-align:top;
-
 }
+
 .paper:before {
    content:counter(paper) ". ";
 }
+
 .paper-text {
   display:inline-block;
 }
