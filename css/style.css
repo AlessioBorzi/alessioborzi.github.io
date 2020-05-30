@@ -1,0 +1,34 @@
+
+/* Navbar */
+.navbar {
+    background-color: #555555 !important;
+}
+
+/* Preprints and Publications lists */
+#firstlist {
+   counter-reset: paper;
+}
+.paper-list tr td:first-child{
+   width: 30px;
+}
+
+.paper{
+   list-style-type:none;
+   counter-increment: paper;
+   vertical-align:top;
+
+}
+.paper:before {
+   content:counter(paper) ". ";
+}
+.paper-text {
+  display:inline-block;
+}
+
+.paper-title {
+  font-style: italic;
+}
+
+.journal-text {
+  color: #888888;
+}
