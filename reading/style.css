@@ -1,0 +1,13 @@
+.meeting-text {
+  font-style: normal;
+}
+
+.date-text {
+  color: black;
+  font-weight: 600;
+}
+
+.title-text {
+  font-variant: small-caps;
+  font-size: 30pt;
+}
