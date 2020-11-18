@@ -3,11 +3,14 @@
 }
 
 .date-text {
-  color: black;
-  font-weight: 600;
+  color: #4169E1;
 }
 
 .title-text {
   font-variant: small-caps;
   font-size: 30pt;
+}
+
+ol li {
+  margin-bottom: 15px;
 }
