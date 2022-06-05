@@ -1,6 +1,6 @@
 
 /* Header */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #headerbackground{
     background-color: #f8f8f8;
     background-image: url("../images/mathbackground.png");
