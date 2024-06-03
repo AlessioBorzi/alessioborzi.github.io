@@ -64,7 +64,36 @@
     </div>
   </nav>
 
-  <!-- PAGE BEGIN -->
+  <!-- LAST UPDATE SCRIPT -->
+
+  <script>
+    const desiredRepo = "alessioborzi.github.io";
+    const dateTagClass = ".last_update"; // The HTML element you want to update
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function()
+    {
+      if (this.readyState == 4 && this.status == 200)
+      {
+        let repos = JSON.parse(this.responseText);
+
+        repos.forEach((repo)=>{
+          if (repo.name == desiredRepo)
+          {
+            var lastUpdated = new Date(repo.pushed_at);
+            var day = lastUpdated.getUTCDate();
+            var month = lastUpdated.getUTCMonth()+1;
+            var year = lastUpdated.getUTCFullYear();
+            $(dateTagClass).text("Last updated: " + day.toString() + "-" + month.toString() + "-" + year.toString());
+          }
+        });
+      }
+    };
+    xhttp.open("GET", "https://api.github.com/users/Alessioborzi/repos", true);
+    xhttp.send();
+  </script>
+
+  <!-- PAGE BEGIN -->  
 
   <div class="container my-5">
     <div class="row">
@@ -79,6 +108,8 @@
           <a target="_blank" href="./pdf/cv/CV.pdf">Curriculum Vitae</a>
           <br/><br/>
           Contact: alessio.borzi (at) mis.mpg.de
+          <br/><br/>
+          <div class="last_update"></div>
         </p>
       </div>
 
